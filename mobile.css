@@ -18,8 +18,9 @@ body {
 /* TABLET AND MOBILE: 950px and below */
 @media (max-width: 950px) {
   body {
-    justify-content: flex-start;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
+    padding:1rem 0;
   }
 
   h1 {
@@ -34,6 +35,9 @@ body {
     height: 40vh;
     border-width: 5px;
     margin-bottom: 0.7rem;
+ 
+  box-shadow: #00ff00 0px 10px 30px 1px;
+  
   }
 
   .paddle {
@@ -43,8 +47,8 @@ body {
   }
 
   #ball {
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
   }
 
   .all__content__bottom {
@@ -166,16 +170,16 @@ body {
   }
 
   #ball {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
   }
 
   #score__board p {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
   button {
-    font-size: 0.8rem;
+    font-size: 2rem;
   }
 
   #image__sprite {

@@ -279,4 +279,15 @@ toggleSwitch.addEventListener('change', () => {
         currentCanvas.style.backgroundImage = `url('${canvas__array[0]}')`;  //dynamically modify the html and then css as result.
     }
 });
+
+// Keeps the ball and paddles positioned correctly when the screen size changes
+window.addEventListener('resize', () => {
+    resetBall();
+
+    leftPaddleY = gameArea.offsetHeight / 2 - leftPaddle.offsetHeight / 2;
+    rightPaddleY = gameArea.offsetHeight / 2 - rightPaddle.offsetHeight / 2;
+
+    leftPaddle.style.top = leftPaddleY + 'px';
+    rightPaddle.style.top = rightPaddleY + 'px';
+});
 /////////////////////////////////////////////////////////end
