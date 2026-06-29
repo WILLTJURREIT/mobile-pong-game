@@ -1,0 +1,184 @@
+/* TOUCH SUPPORT */
+html,
+body {
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+#game__area,
+#left__paddle,
+#right__paddle,
+#ball {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* TABLET AND MOBILE: 950px and below */
+@media (max-width: 950px) {
+  body {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  h1 {
+    width: 94vw;
+    font-size: clamp(1rem, 5vw, 2rem);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  #game__area {
+    width: 94vw;
+    height: 40vh;
+    border-width: 5px;
+    margin-bottom: 0.7rem;
+  }
+
+  .paddle {
+    width: 18px;
+    height: 78px;
+    border-width: 3px;
+  }
+
+  #ball {
+    width: 36px;
+    height: 36px;
+  }
+
+  .all__content__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 94vw;
+    max-width: 94vw;
+    gap: 0.7rem;
+    padding: 0;
+  }
+
+  #game__controls__left,
+  #game__controls__right {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    padding: 0.65rem;
+    margin: 0;
+  }
+
+  #game__controls__left:hover,
+  #game__controls__right:hover {
+    height: auto;
+  }
+
+  #text__content__left,
+  #text__content__right {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    overflow: hidden;
+  }
+
+  #score__board {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  #score__board p {
+    font-size: clamp(1.05rem, 4vw, 1.5rem);
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  #controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 0.65rem;
+  }
+
+  button {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.4rem;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  #text__content__left h2 {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+
+  #select__ball,
+  #toggle__switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  #select__ball h6,
+  #toggle__switch h6 {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    margin: 0;
+    line-height: 1;
+  }
+
+  #image__sprite {
+    width: 130px;
+    min-height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .switch {
+    width: 54px;
+    height: 30px;
+  }
+
+  .slider:before {
+    height: 22px;
+    width: 22px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 575px) {
+  #game__area {
+    height: 38vh;
+  }
+
+  .paddle {
+    width: 16px;
+    height: 74px;
+  }
+
+  #ball {
+    width: 32px;
+    height: 32px;
+  }
+
+  #score__board p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+
+  #image__sprite {
+    width: 120px;
+  }
+}

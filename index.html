@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong Game with Music</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Lets Play Pong!</h1>
+    </header>
+
+    <section id="game__area">
+      <div id="left__paddle" class="paddle"></div>
+      <div id="right__paddle" class="paddle"></div>
+      <img id="ball" src="assets/images/robot_ball.png" alt="Ball" />
+    </section>
+
+    <section class="all__content__bottom">
+      <section id="game__controls__right">
+        <div id="content__wrapper__right">
+          <div id="text__content__right">
+            <section id="score__board">
+              <p id="player__score">Gamer: 0</p>
+              <p id="computer__score">Computer: 0</p>
+            </section>
+
+            <section id="controls">
+              <button id="start__button">Start Game</button>
+              <button id="end__button" disabled>End Game</button>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="game__controls__left">
+        <div id="content__wrapper__left">
+          <div id="text__content__left">
+            <h2>Control Board</h2>
+
+            <div id="select__ball">
+              <h6>Select Ball</h6>
+              <select name="imageSprite" id="image__sprite">
+                <option value="assets/images/robot_ball.png">Robot</option>
+                <option value="assets/images/lightning_bolt_ball.png">Lightning Bolt</option>
+                <option value="assets/images/monster_ball.png">Monster</option>
+                <option value="assets/images/eyeBall.png">Eye Ball</option>
+                <option value="assets/images/dragon_ball.png">Dragon</option>
+              </select>
+            </div>
+
+            <div id="toggle__switch">
+              <h6>Change Canvas</h6>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="audio__section">
+      <audio id="game__music" src="assets/audio/gameMusic.mp3" preload="auto"></audio>
+    </section>
+
+    <footer></footer>
+
+    <script src="app.js?v=10"></script>
+  </body>
+</html>
